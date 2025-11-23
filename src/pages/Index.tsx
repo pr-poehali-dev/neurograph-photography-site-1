@@ -99,7 +99,7 @@ const Index = () => {
             <Card className="overflow-hidden">
               <div className="relative h-80 w-full overflow-hidden">
                 <img 
-                  src="https://cdn.poehali.dev/files/42e30177-01a2-4ca1-ab9c-22f93286e334.jpg"
+                  src="https://cdn.poehali.dev/files/7cd5fbec-41bf-456d-98de-1c14f91b5e42.jpg"
                   alt="Мария - классический фотограф"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
@@ -122,7 +122,7 @@ const Index = () => {
             <Card className="overflow-hidden">
               <div className="relative h-80 w-full overflow-hidden">
                 <img 
-                  src="https://cdn.poehali.dev/files/fe75699e-c452-4a3d-afb5-7477e525d402.JPG"
+                  src="https://cdn.poehali.dev/files/d5fcbfd8-eacd-4e56-8d5f-1c810afdbec8.JPG"
                   alt="Александра - нейрофотограф"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
