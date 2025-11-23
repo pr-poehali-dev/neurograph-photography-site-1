@@ -96,13 +96,20 @@ const Index = () => {
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">О фотографах</h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <Card>
+            <Card className="overflow-hidden">
+              <div className="relative h-80 w-full overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/42e30177-01a2-4ca1-ab9c-22f93286e334.jpg"
+                  alt="Мария - классический фотограф"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon name="Camera" size={32} className="text-primary" />
-                </div>
                 <CardTitle className="text-2xl">Мария</CardTitle>
-                <CardDescription>Классический фотограф</CardDescription>
+                <CardDescription className="flex items-center gap-2">
+                  <Icon name="Camera" size={18} className="text-primary" />
+                  Классический фотограф
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
@@ -112,13 +119,20 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="overflow-hidden">
+              <div className="relative h-80 w-full overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/fe75699e-c452-4a3d-afb5-7477e525d402.JPG"
+                  alt="Александра - нейрофотограф"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardHeader>
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
-                  <Icon name="Sparkles" size={32} className="text-primary" />
-                </div>
                 <CardTitle className="text-2xl">Александра</CardTitle>
-                <CardDescription>Нейрофотограф</CardDescription>
+                <CardDescription className="flex items-center gap-2">
+                  <Icon name="Sparkles" size={18} className="text-primary" />
+                  Нейрофотограф
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground leading-relaxed">
