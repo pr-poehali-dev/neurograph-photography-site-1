@@ -6,6 +6,8 @@ import Icon from '@/components/ui/icon';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [mariaExpanded, setMariaExpanded] = useState(false);
+  const [alexandraExpanded, setAlexandraExpanded] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -96,7 +98,7 @@ const Index = () => {
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold text-center mb-12">О фотографах</h2>
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setMariaExpanded(!mariaExpanded)}>
               <div className="relative h-80 w-full overflow-hidden">
                 <img 
                   src="https://cdn.poehali.dev/files/7cd5fbec-41bf-456d-98de-1c14f91b5e42.jpg"
@@ -105,21 +107,26 @@ const Index = () => {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-2xl">Мария</CardTitle>
+                <CardTitle className="text-2xl flex items-center justify-between">
+                  Мария
+                  <Icon name={mariaExpanded ? "ChevronUp" : "ChevronDown"} size={24} className="text-primary" />
+                </CardTitle>
                 <CardDescription className="flex items-center gap-2">
                   <Icon name="Camera" size={18} className="text-primary" />
                   Классический фотограф
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Профессиональный фотограф с 8-летним опытом работы. Специализируется на портретной, 
-                  семейной и свадебной съемке. Создаю живые, естественные кадры, которые передают 
-                  настоящие эмоции и атмосферу момента.
-                </p>
-              </CardContent>
+              {mariaExpanded && (
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Профессиональный фотограф с 8-летним опытом работы. Специализируется на портретной, 
+                    семейной и свадебной съемке. Создаю живые, естественные кадры, которые передают 
+                    настоящие эмоции и атмосферу момента.
+                  </p>
+                </CardContent>
+              )}
             </Card>
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden cursor-pointer hover:shadow-lg transition-shadow" onClick={() => setAlexandraExpanded(!alexandraExpanded)}>
               <div className="relative h-80 w-full overflow-hidden">
                 <img 
                   src="https://cdn.poehali.dev/files/d5fcbfd8-eacd-4e56-8d5f-1c810afdbec8.JPG"
@@ -128,19 +135,24 @@ const Index = () => {
                 />
               </div>
               <CardHeader>
-                <CardTitle className="text-2xl">Александра</CardTitle>
+                <CardTitle className="text-2xl flex items-center justify-between">
+                  Александра
+                  <Icon name={alexandraExpanded ? "ChevronUp" : "ChevronDown"} size={24} className="text-primary" />
+                </CardTitle>
                 <CardDescription className="flex items-center gap-2">
                   <Icon name="Sparkles" size={18} className="text-primary" />
                   Нейрофотограф
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  Специалист по созданию уникальных изображений с помощью искусственного интеллекта. 
-                  Создаю фантастические, стилизованные и концептуальные портреты, которые выходят 
-                  за рамки реальности и воплощают самые смелые идеи.
-                </p>
-              </CardContent>
+              {alexandraExpanded && (
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Специалист по созданию уникальных изображений с помощью искусственного интеллекта. 
+                    Создаю фантастические, стилизованные и концептуальные портреты, которые выходят 
+                    за рамки реальности и воплощают самые смелые идеи.
+                  </p>
+                </CardContent>
+              )}
             </Card>
           </div>
         </div>
